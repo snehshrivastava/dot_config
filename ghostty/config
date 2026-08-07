@@ -1,0 +1,17 @@
+# font
+font-family = "JetBrainsMono Nerd Font"
+font-size = 13
+
+# terminfo Ghostty reports — tmux inside will still use tmux-256color, this is fine
+term = xterm-ghostty
+
+# mouse: ghostty forwards SGR mouse events to tmux/nvim natively, no opt-in
+# checkbox needed (unlike iTerm2's "Enable mouse reporting")
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 3
+mouse-shift-capture = false
+
+scrollback-limit = 10000
+
+# true color
+window-decoration = true
