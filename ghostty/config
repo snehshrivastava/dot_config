@@ -2,6 +2,15 @@
 font-family = "JetBrainsMono Nerd Font"
 font-size = 13
 
+# macOS CoreText renders text thin/blurry on non-Retina and external
+# monitors; thicken compensates (strength tuned down from default 255
+# so it doesn't overcorrect on the built-in Retina panel)
+font-thicken = true
+font-thicken-strength = 150
+
+# avoids washed-out/hazy color blending on some macOS displays
+window-colorspace = "display-p3"
+
 # terminfo Ghostty reports — tmux inside will still use tmux-256color, this is fine
 term = xterm-ghostty
 
