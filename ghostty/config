@@ -22,12 +22,22 @@ term = xterm-ghostty
 # checkbox needed (unlike iTerm2's "Enable mouse reporting")
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 3
-mouse-shift-capture = false
+
+# over SSH, a remote tmux/vim/pager often captures mouse-reporting, so a
+# plain click-drag gets forwarded to it and its redraw snaps the view to
+# the bottom instead of just selecting text; "never" locks shift+drag to
+# always do local selection regardless of what the remote app requests —
+# hold shift while selecting on remote sessions
+mouse-shift-capture = never
 
 scrollback-limit = 10000
 
 # true color
 window-decoration = true
+
+# macOS doesn't send the escape sequences zsh needs for option+arrow
+# word-jump / option+delete unless the terminal opts in
+macos-option-as-alt = true
 
 # breathing room around text, and a cursor that doesn't blink-flicker
 window-padding-x = 10
