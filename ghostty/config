@@ -1,3 +1,7 @@
+# theme — matches the tokyonight-night palette already used in nvim,
+# so terminal and editor look like one continuous surface
+theme = "TokyoNight Night"
+
 # font
 font-family = "JetBrainsMono Nerd Font"
 font-size = 13
@@ -24,3 +28,13 @@ scrollback-limit = 10000
 
 # true color
 window-decoration = true
+
+# breathing room around text, and a cursor that doesn't blink-flicker
+window-padding-x = 10
+window-padding-y = 8
+cursor-style = block
+cursor-style-blink = false
+
+# subtle depth without hurting text contrast (macOS only)
+background-opacity = 0.96
+background-blur-radius = 20
